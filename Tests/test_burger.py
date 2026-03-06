@@ -20,8 +20,8 @@ class TestBurger:
     def test_add_ingredient_success(self, ingredients, added_ingredient):
         burger = Burger()
         burger.add_ingredient(ingredients)
-        assert burger.ingredients == [added_ingredient] and len(burger.ingredients) == 1
-
+        assert burger.ingredients == [added_ingredient]
+        
     #Проверка работы метода remove_ingredient, удаляющего ингредиент из бургера.
     #С помощью параметризации выполняем два теста: проверяем по очереди удаление соуса и начинки.
     @pytest.mark.parametrize('ingredients, removed_ingredient', [
